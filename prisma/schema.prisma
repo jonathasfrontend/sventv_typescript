@@ -1,0 +1,39 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model filmes {
+  id    String @id @default(uuid())
+  title String
+  link  String
+  image String
+}
+
+model esports {
+  id    String @id @default(uuid())
+  title String
+  link  String
+  image String
+}
+
+model variedades {
+  id    String @id @default(uuid())
+  title String
+  link  String
+  image String
+}
+
+model desenhos {
+  id    String @id @default(uuid())
+  title String
+  link  String
+  image String
+}
